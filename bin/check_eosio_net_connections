@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+const connections = require('../lib/eosio_net_connections.js');
+const program     = require('commander');
+
+
+                  
+program                         
+    .option('--url [value]', 'nodeos API URL')
+    .parse(process.argv);
+
+if (program.url) {
+    
+    connections.check_connections(program.url, function(data) {
+        console.log(data);
+        process.exit(0);
+    });
+} else {
+    program.help();
+}
+
+
+
+/*
+ Local Variables:
+ mode: javascript
+ indent-tabs-mode: nil
+ End:
+*/

@@ -13,6 +13,8 @@ git clone https://github.com/eos-amsterdam-rnd/eosio_net_monitor.git /opt/eosio_
 cd /opt/eosio_net_monitor
 npm install -g
 
+# Alternatively, "npm install" without the -g flag will download modules locally, and
+# the script is available as /opt/eosio_net_monitor/bin/check_eosio_net_connections
 ```
 
 

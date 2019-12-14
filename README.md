@@ -18,6 +18,25 @@ npm install -g
 
 ## Usage
 
+The tool is accessing a `nodeos` instance which has `plugin =
+eosio::net_api_plugin` enabled. WARNING: this plugin exposes functions
+that allow to disable p2p peers, so it must not be exposed to public
+internet.
+
+Important output fields:
+
+* `me -> block_time_delta` shows how far the node's own head block is
+  behind the host clock.
+
+* `peers -> /peername/ -> connected` indicates if the p2p connection
+  is in use.
+
+* `peers -> /peername/ -> last_handshake_seconds_ago` shows when the
+  latest handshake message has been received. The longer the period,
+  the more stable the remote node is.
+
+
+
 ```
 $ check_eosio_net_connections --url=http://127.0.0.1:8888
 {

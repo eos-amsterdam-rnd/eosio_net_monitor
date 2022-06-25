@@ -19,6 +19,6 @@
     ],
     "dependencies": {
         "commander": "^2.19.0",
-        "node-fetch": ">= 2.6.0"
+        "node-fetch": ">= 2.6.7"
     }
 }
